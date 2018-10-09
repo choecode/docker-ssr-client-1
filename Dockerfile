@@ -16,11 +16,9 @@ ENV DNS_ADDR_2      8.8.4.4
 ARG BRANCH=manyuser
 ARG WORK=/opt/shadowsocksr
 
-
 RUN apk --no-cache add python \
     libsodium \
     wget
-
 
 RUN mkdir -p $WORK && \
     wget -qO- --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/archive/$BRANCH.tar.gz | tar -xzf - -C $WORK
