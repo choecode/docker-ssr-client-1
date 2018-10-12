@@ -9,6 +9,7 @@ ENV METHOD          aes-128-ctr
 ENV PROTOCOL        auth_aes128_md5
 ENV PROTOCOLPARAM   32
 ENV OBFS            tls1.2_ticket_auth_compatible
+ENV OBFSPARAM       obfsparam
 ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
 ENV DNS_ADDR_2      8.8.4.4
@@ -26,4 +27,4 @@ RUN mkdir -p $WORK && \
 WORKDIR $WORK/shadowsocksr-$BRANCH/shadowsocks
 
 EXPOSE $LOCAL_PORT
-CMD python local.py -s $SERVER_ADDR -p $SERVER_PORT -b $LOCAL_ADDR -l $LOCAL_PORT -k $PASSWORD -m $METHOD -O $PROTOCOL -o $OBFS -G $PROTOCOLPARAM
+CMD python local.py -s $SERVER_ADDR -p $SERVER_PORT -b $LOCAL_ADDR -l $LOCAL_PORT -k $PASSWORD -m $METHOD -O $PROTOCOL -o $OBFS -g $OBFSPARAM -G $PROTOCOLPARAM
