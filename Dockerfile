@@ -1,14 +1,14 @@
 FROM alpine:3.6
 
 ENV LOCAL_ADDR      127.0.0.1
-ENV LOCAL_PORT      51384
-ENV SERVER_ADDR     0.0.0.0
-ENV SERVER_PORT     51348
-ENV PASSWORD        psw
-ENV METHOD          aes-128-ctr
-ENV PROTOCOL        auth_aes128_md5
+ENV LOCAL_PORT      1090
+ENV SERVER_ADDR     137.116.147.80
+ENV SERVER_PORT     19007
+ENV PASSWORD        hiaewalle
+ENV METHOD          chacha20-ietf
+ENV PROTOCOL        auth_chain_a
 ENV PROTOCOLPARAM   32
-ENV OBFS            tls1.2_ticket_auth_compatible
+ENV OBFS            tls1.2_ticket_auth
 ENV OBFSPARAM       obfsparam
 ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
