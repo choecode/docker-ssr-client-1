@@ -1,15 +1,15 @@
 FROM alpine:3.6
 
-ENV LOCAL_ADDR      127.0.0.1
+ENV LOCAL_ADDR      0.0.0.0
 ENV LOCAL_PORT      1090
-ENV SERVER_ADDR     137.116.147.80
-ENV SERVER_PORT     19007
+ENV SERVER_ADDR     13.76.46.29
+ENV SERVER_PORT     2333
 ENV PASSWORD        hiaewalle
-ENV METHOD          chacha20-ietf
-ENV PROTOCOL        auth_chain_a
-ENV PROTOCOLPARAM   32
+ENV METHOD          AES-256-CFB
+ENV PROTOCOL        auth_aes128_md5
+ENV PROTOCOLPARAM   
 ENV OBFS            tls1.2_ticket_auth
-ENV OBFSPARAM       obfsparam
+ENV OBFSPARAM       
 ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
 ENV DNS_ADDR_2      8.8.4.4
